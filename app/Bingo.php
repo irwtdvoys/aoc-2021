@@ -65,5 +65,4 @@
 			return $result;
 		}
 	}
-	// 14272 high
 ?>
