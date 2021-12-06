@@ -23,3 +23,7 @@ The way I had setup the board data structures meant part 2 was just run until th
 ##### Day 05
 
 Was pretty late in the day when I got around to this and it runs slower than expected and required more memory so I've done something badly somewhere...
+
+##### Day 06
+
+Didn't really pay attention to the obvious exponential growth hint so part 1 was a mice clean model of the school that would never work for part 2. Re-thought it through and simply kept a count of numbers of fish at the 9 different stages.
