@@ -3,66 +3,54 @@
 
 	use AoC\Helper;
 	use AoC\Result;
-	use AoC\Utils\Position2d;
-	use App\School\LanternFish;
-	use App\Vents\Line;
 
 	class School extends Helper
 	{
-		/** @var LanternFish[] */
-		public array $fish = [];
+		/** @var int[] */
+		public array $gestation = [];
 
 		public function __construct(int $day, string $override = null)
 		{
 			parent::__construct($day);
 
 			$raw = parent::load($override);
-
 			$values = explode(",", $raw);
 
-			$this->fish = array_map(
-				function ($element)
-				{
-					return new LanternFish((int)$element);
-				},
-				$values
-			);
+			$this->gestation = array_fill(0, 9, 0);
+
+			foreach ($values as $value)
+			{
+				$this->gestation[(int)$value]++;
+			}
 		}
 
-		private function draw(): void
+		private function tick(): void
 		{
-			$values = [];
+			$new = $this->gestation;
 
-			foreach ($this->fish as $fish)
-			{
-				$values[] = $fish->timer;
-			}
+			$breeders = array_shift($new);
 
-			echo(implode(",", $values) . PHP_EOL);
+			$new[6] += $breeders;
+			$new[8] = $breeders;
+
+			$this->gestation = $new;
 		}
 
 		public function run(): Result
 		{
 			$result = new Result();
 
-			for ($loop = 0; $loop < 80; $loop++)
+			for ($loop = 1; $loop <= 256; $loop++)
 			{
-				$new = [];
+				$this->tick();
 
-				foreach ($this->fish as $fish)
+				if ($loop === 80)
 				{
-					$return = $fish->tick();
-
-					if (isset($return))
-					{
-						$new[] = $return;
-					}
+					$result->part1 = array_sum($this->gestation);
 				}
-
-				$this->fish = array_merge($this->fish, $new);
 			}
 
-			$result->part1 = count($this->fish);
+			$result->part2 = array_sum($this->gestation);
 
 			return $result;
 		}
