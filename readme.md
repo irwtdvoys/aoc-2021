@@ -27,3 +27,7 @@ Was pretty late in the day when I got around to this and it runs slower than exp
 ##### Day 06
 
 Didn't really pay attention to the obvious exponential growth hint so part 1 was a mice clean model of the school that would never work for part 2. Re-thought it through and simply kept a count of numbers of fish at the 9 different stages.
+
+##### Day 07
+
+Grouped the crabs by position rather than trying to model them all and calculated distance to move for each group. This allowed part 2 to just require a tweak to the calculation to use triangular numbers.
