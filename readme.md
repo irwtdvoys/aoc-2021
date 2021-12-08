@@ -31,3 +31,7 @@ Didn't really pay attention to the obvious exponential growth hint so part 1 was
 ##### Day 07
 
 Grouped the crabs by position rather than trying to model them all and calculated distance to move for each group. This allowed part 2 to just require a tweak to the calculation to use triangular numbers.
+
+##### Day 08
+
+Part 1 didn't require much past processing the input file. For part 2 the solution made heavy use of array functions to deduce other numbers. I have to fully decode each segment, but it wasn't required in the end.

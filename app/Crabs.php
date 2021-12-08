@@ -3,12 +3,10 @@
 
 	use AoC\Helper;
 	use AoC\Result;
-	use AoC\Utils\Position2d;
-	use App\Vents\Line;
+	use Bolt\Maths;
 
 	class Crabs extends Helper
 	{
-		public array $crabs = [];
 		public array $positions = [];
 
 		public function __construct(int $day, string $override = null)
@@ -17,11 +15,10 @@
 
 			$raw = parent::load($override);
 
-			$this->crabs = array_map("intval", explode(",", $raw));
+			$crabs = array_map("intval", explode(",", $raw));
+			$this->positions = array_fill(min($crabs), max($crabs) + 1, 0);
 
-			$this->positions = array_fill(min($this->crabs), max($this->crabs) + 1, 0);
-
-			foreach ($this->crabs as $crab)
+			foreach ($crabs as $crab)
 			{
 				$this->positions[$crab]++;
 			}
