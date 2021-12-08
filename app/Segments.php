@@ -3,11 +3,11 @@
 
 	use AoC\Helper;
 	use AoC\Result;
-	use App\Segments\Segment;
+	use App\Segments\Display;
 
 	class Segments extends Helper
 	{
-		/** @var Segment[] */
+		/** @var Display[] */
 		public array $entries = [];
 
 		public function __construct(int $day, string $override = null)
@@ -19,7 +19,7 @@
 
 			foreach ($rows as $row)
 			{
-				$this->entries[] = new Segment($row);
+				$this->entries[] = new Display($row);
 			}
 		}
 

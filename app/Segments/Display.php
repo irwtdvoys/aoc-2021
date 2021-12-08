@@ -1,7 +1,7 @@
 <?php
 	namespace App\Segments;
 
-	class Segment
+	class Display
 	{
 		public array $patterns = [];
 		public array $outputs = [];
