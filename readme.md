@@ -35,3 +35,7 @@ Grouped the crabs by position rather than trying to model them all and calculate
 ##### Day 08
 
 Part 1 didn't require much past processing the input file. For part 2 the solution made heavy use of array functions to deduce other numbers. I have to fully decode each segment, but it wasn't required in the end.
+
+##### Day 09
+
+Mapped the data to a flat array then used an additional map to store details about groups.
