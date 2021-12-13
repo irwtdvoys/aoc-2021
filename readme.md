@@ -39,3 +39,9 @@ Part 1 didn't require much past processing the input file. For part 2 the soluti
 ##### Day 09
 
 Mapped the data to a flat array then used an additional map to store details about groups.
+
+#### Long + busy weekend, 10-12 will be done when I get the chance
+
+##### Day 13
+
+Surprisingly easy one today, did the full implementation without realising it, was already outputting the paper state and due to the data structure I had used both folds used the same code.
