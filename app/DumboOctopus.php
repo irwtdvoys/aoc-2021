@@ -120,7 +120,6 @@
 
 						if ($this->map[$x][$y] > 9 && !in_array($key, array_keys($flashed)))
 						{
-							// flash
 							$flashed[$key] = $point;
 							$new = true;
 
@@ -148,16 +147,16 @@
 		{
 			$result = new Result(0, 0);
 
-			$steps = 100;
-			$total = count($this->map) * count($this->map[0]);
-
-			$this->draw();
 			$iteration = 1;
 
 			while (true)
 			{
 				$count = $this->tick();
-				$result->part1 += $count;
+
+				if ($iteration <= 100)
+				{
+					$result->part1 += $count;
+				}
 
 				if ($count === 100)
 				{
@@ -167,8 +166,6 @@
 
 				$iteration++;
 			}
-
-			$this->draw();
 
 			return $result;
 		}

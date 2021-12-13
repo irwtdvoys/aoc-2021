@@ -15,6 +15,6 @@
 		->output()
 	;
 
-	// Part 1: 0
-	// Part 2: 0
+	// Part 1: 1694
+	// Part 2: 346
 ?>
