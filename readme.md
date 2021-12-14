@@ -45,3 +45,7 @@ Mapped the data to a flat array then used an additional map to store details abo
 ##### Day 13
 
 Surprisingly easy one today, did the full implementation without realising it, was already outputting the paper state and due to the data structure I had used both folds used the same code.
+
+##### Day 14
+
+Didn't make the same mistake this time! Saw the warning about the list getting long and built the solution to keep counts of elements and work on a pair list. Part 2 worked straight away.
