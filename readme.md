@@ -49,3 +49,7 @@ Surprisingly easy one today, did the full implementation without realising it, w
 ##### Day 14
 
 Didn't make the same mistake this time! Saw the warning about the list getting long and built the solution to keep counts of elements and work on a pair list. Part 2 worked straight away.
+
+##### Day 16
+
+Took a while to wrap my head around the operation packet functionality in part 1 but the recursive solution I implemented worked for part 2 and only required the per type value calculations, super fast as well =)
