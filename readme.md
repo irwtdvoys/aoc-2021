@@ -40,7 +40,17 @@ Part 1 didn't require much past processing the input file. For part 2 the soluti
 
 Mapped the data to a flat array then used an additional map to store details about groups.
 
-#### Long + busy weekend, 10-12 will be done when I get the chance
+##### Day 10
+
+PHP has a build in stack class which did the bulk of the lifting work here.
+
+##### Day 11
+
+Straight forward, by keeping track of a list of flashed nodes each step it ensured they only flashed once.
+
+##### Day 12
+
+NYI
 
 ##### Day 13
 
@@ -50,6 +60,14 @@ Surprisingly easy one today, did the full implementation without realising it, w
 
 Didn't make the same mistake this time! Saw the warning about the list getting long and built the solution to keep counts of elements and work on a pair list. Part 2 worked straight away.
 
+##### Day 15
+
+NYI
+
 ##### Day 16
 
 Took a while to wrap my head around the operation packet functionality in part 1 but the recursive solution I implemented worked for part 2 and only required the per type value calculations, super fast as well =)
+
+##### Day 17
+
+Tried to be clever on part 1, ended up brute forcing part 2 anyway =/
