@@ -67,3 +67,7 @@ NYI
 ##### Day 16
 
 Took a while to wrap my head around the operation packet functionality in part 1 but the recursive solution I implemented worked for part 2 and only required the per type value calculations, super fast as well =)
+
+##### Day 17
+
+Tried to be clever on part 1, ended up brute forcing part 2 anyway =/
