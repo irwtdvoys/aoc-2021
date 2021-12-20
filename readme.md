@@ -71,3 +71,11 @@ Took a while to wrap my head around the operation packet functionality in part 1
 ##### Day 17
 
 Tried to be clever on part 1, ended up brute forcing part 2 anyway =/
+
+##### Weekend
+
+Turns out you don't have a lot of free time at weekends with a 1 and 2-year-old in the run-up to Christmas... I'll get to them eventually =/
+
+##### Day 20
+
+Fun game of life task, the real data swapping the infinite grid from light to dark caught me out at first!
