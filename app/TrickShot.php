@@ -3,20 +3,8 @@
 
 	use AoC\Helper;
 	use AoC\Result;
-	use AoC\Utils\Range;
+	use App\TrickShot\Target;
 	use Bolt\Maths;
-
-	class Target
-	{
-		public Range $x;
-		public Range $y;
-
-		public function __construct(Range $x = null, Range $y = null)
-		{
-			$this->x = $x ?? new Range();
-			$this->y = $y ?? new Range();
-		}
-	}
 
 	class TrickShot extends Helper
 	{
