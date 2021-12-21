@@ -83,3 +83,7 @@ NYI
 ##### Day 20
 
 Fun game of life task, the real data swapping the infinite grid from light to dark caught me out at first!
+
+##### Day 21
+
+Took the time to model the dice/board etc, used a circular linked list for the board but it wasn't any use for part 2 where I just used a cache with recursion to build the tally of universes.
