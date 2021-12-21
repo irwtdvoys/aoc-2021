@@ -72,9 +72,13 @@ Took a while to wrap my head around the operation packet functionality in part 1
 
 Tried to be clever on part 1, ended up brute forcing part 2 anyway =/
 
-##### Weekend
+##### Day 18
 
-Turns out you don't have a lot of free time at weekends with a 1 and 2-year-old in the run-up to Christmas... I'll get to them eventually =/
+Used a tree as the data structure which gave some powerful abilities with recursion but made the locating left/right very hard. Ended up keeping parent references and spending a lot of time debugging.
+
+##### Day 19
+
+NYI
 
 ##### Day 20
 
