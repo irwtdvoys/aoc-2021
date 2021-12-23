@@ -50,7 +50,7 @@ Straight forward, by keeping track of a list of flashed nodes each step it ensur
 
 ##### Day 12
 
-NYI
+Nice straight forward recursive solution worked for both parts with a minor change to the small cave logic. Each checked node knew the full path upto that point so simple checks were enough.
 
 ##### Day 13
 
