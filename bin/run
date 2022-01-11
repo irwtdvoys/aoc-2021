@@ -8,6 +8,7 @@
 	use App\DiracDice;
 	use App\Dive;
 	use App\DumboOctopus;
+	use App\PacketDecoder;
 	use App\PassagePathing;
 	use App\Polymerization;
 	use App\ReactorReboot;
@@ -15,10 +16,12 @@
 	use App\SeaCucumber;
 	use App\Segments;
 	use App\SmokeBasin;
+	use App\Snailfish;
 	use App\SonarSweep;
 	use App\SyntaxScoring;
 	use App\TransparentOrigami;
 	use App\TrenchMap;
+	use App\TrickShot;
 	use App\Vents;
 
 	const ROOT = __DIR__ . "/../";
@@ -44,12 +47,14 @@
 		13 => TransparentOrigami::class,
 		14 => Polymerization::class,
 		15 => Chiton::class,
-		16 => SyntaxScoring::class,
-		17 => DumboOctopus::class,
-		18 => PassagePathing::class,
+		16 => PacketDecoder::class,
+		17 => TrickShot::class,
+		18 => Snailfish::class,
+		#19 => BeaconScanner::class,
 		20 => TrenchMap::class,
 		21 => DiracDice::class,
 		22 => ReactorReboot::class,
+		#23 => Amphipod::class,
 		24 => ArithmeticLogicUnit::class,
 		25 => SeaCucumber::class,
 	];
