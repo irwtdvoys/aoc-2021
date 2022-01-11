@@ -91,3 +91,7 @@ Took the time to model the dice/board etc, used a circular linked list for the b
 ##### Day 24
 
 Implemented the ALU to help understand the program and check numbers before submission but a vast majority of work was on paper.
+
+##### Day 25
+
+Finally got around to it! Nice and simple but was a little slow, can probably reduce the run time by only checking cells with a cucumber but it's not really a bit deal with this one.
