@@ -122,8 +122,11 @@
 			$result->part1 = $this->points($this->regions[1]);
 			$result->part2 = $this->points($this->regions[2]);
 
-			#$this->draw($this->regions[1]);
-			#$this->draw($this->regions[2]);
+			if ($this->verbose)
+			{
+				$this->draw($this->regions[1]);
+				$this->draw($this->regions[2]);
+			}
 
 			return $result;
 		}

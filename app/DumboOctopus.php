@@ -151,7 +151,7 @@
 
 			while (true)
 			{
-				$count = $this->tick();
+				$count = $this->tick($this->verbose);
 
 				if ($iteration <= 100)
 				{

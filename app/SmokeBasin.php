@@ -185,7 +185,10 @@
 			rsort($sizes);
 			$result->part2 = array_product(array_slice($sizes,0, 3));
 
-			$this->draw();
+			if ($this->verbose)
+			{
+				$this->draw();
+			}
 
 			return $result;
 		}
