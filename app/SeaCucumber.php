@@ -46,16 +46,11 @@
 				{
 					if ($this->region[$y][$x] === $herd)
 					{
-						switch ($herd)
+						$target = match($herd)
 						{
-							case Tiles::EAST:
-								$target = new Position2d(($x + 1) % count($this->region[$y]), $y);
-								break;
-							case Tiles::SOUTH:
-								$target = new Position2d($x, ($y + 1) % count($this->region));
-								break;
-
-						}
+							Tiles::EAST => new Position2d(($x + 1) % count($this->region[$y]), $y),
+							Tiles::SOUTH => new Position2d($x, ($y + 1) % count($this->region)),
+						};
 
 						if ($this->region[$target->y][$target->x] === Tiles::BLANK)
 						{

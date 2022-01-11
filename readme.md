@@ -88,6 +88,14 @@ Fun game of life task, the real data swapping the infinite grid from light to da
 
 Took the time to model the dice/board etc, used a circular linked list for the board but it wasn't any use for part 2 where I just used a cache with recursion to build the tally of universes.
 
+##### Day 22
+
+NYI
+
+##### Day 23
+
+NYI
+
 ##### Day 24
 
 Implemented the ALU to help understand the program and check numbers before submission but a vast majority of work was on paper.
