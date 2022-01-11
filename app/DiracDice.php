@@ -28,9 +28,9 @@
 			9 => 1,
 		];
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->dice = new Dice();
 			$this->board = new CircularLinkedList();

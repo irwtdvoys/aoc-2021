@@ -12,9 +12,9 @@
 		public array $algorithm;
 		public Image $image;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			list($algorithm, $image) = explode(str_repeat(PHP_EOL, 2), parent::load($override));
 
