@@ -62,7 +62,7 @@ Didn't make the same mistake this time! Saw the warning about the list getting l
 
 ##### Day 15
 
-NYI
+Implemented A* for the path finding as I felt the size of the search space wouldn't lend itself well to Dijkstra. Used the Priority Queue from SPL and just tweaked it to compare in reverse.
 
 ##### Day 16
 
