@@ -10,9 +10,9 @@
 	{
 		public array $region;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$raw = parent::load($override);
 
@@ -87,9 +87,20 @@
 			$loop = 1;
 			$moved = PHP_INT_MAX;
 
+			if ($this->verbose)
+			{
+				$this->draw();
+			}
+
 			while ($moved > 0)
 			{
 				$moved = $this->step();
+
+				if ($this->verbose)
+				{
+					$this->draw();
+				}
+
 				$loop++;
 			}
 

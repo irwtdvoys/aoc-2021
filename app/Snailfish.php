@@ -20,9 +20,9 @@
 			"[[[[[9,8],1],2],3],4]",
 		];
 
-		public function __construct(int $day)
+		public function __construct(int $day, bool $verbose = false)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$this->numbers = $this->parseInput();
 		}

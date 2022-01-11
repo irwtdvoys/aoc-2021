@@ -10,9 +10,9 @@
 		public array $rules = [];
 		public array $quantities = [];
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			list($template, $rules) = explode(str_repeat(PHP_EOL, 2), parent::load($override));
 			$rules = explode(PHP_EOL, $rules);

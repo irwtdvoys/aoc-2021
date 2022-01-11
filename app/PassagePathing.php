@@ -10,9 +10,9 @@
 		/** @var Node[] */
 		public array $nodes;
 
-		public function __construct(int $day, string $override = null)
+		public function __construct(int $day, bool $verbose = false, string $override = null)
 		{
-			parent::__construct($day);
+			parent::__construct($day, $verbose);
 
 			$rows = explode(PHP_EOL, parent::load($override));
 			$labels = [];

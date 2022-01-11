@@ -1,0 +1,75 @@
+#!/usr/bin/env php
+<?php
+	use App\ArithmeticLogicUnit;
+	use App\BinaryDiagnostic;
+	use App\Bingo;
+	use App\Chiton;
+	use App\Crabs;
+	use App\DiracDice;
+	use App\Dive;
+	use App\DumboOctopus;
+	use App\PassagePathing;
+	use App\Polymerization;
+	use App\ReactorReboot;
+	use App\School;
+	use App\SeaCucumber;
+	use App\Segments;
+	use App\SmokeBasin;
+	use App\SonarSweep;
+	use App\SyntaxScoring;
+	use App\TransparentOrigami;
+	use App\TrenchMap;
+	use App\Vents;
+
+	const ROOT = __DIR__ . "/../";
+
+	require_once(ROOT . "bin/init.php");
+
+	// ./bin/run --day 1 --override example -v
+
+	$helpers = [
+		1 => SonarSweep::class,
+		2 => Dive::class,
+		3 => BinaryDiagnostic::class,
+		4 => Bingo::class,
+		5 => Vents::class,
+		6 => School::class,
+		7 => Crabs::class,
+		8 => Segments::class,
+		9 => SmokeBasin::class,
+		10 => SyntaxScoring::class,
+		11 => DumboOctopus::class,
+		12 => PassagePathing::class,
+		13 => TransparentOrigami::class,
+		14 => Polymerization::class,
+		15 => Chiton::class,
+		16 => SyntaxScoring::class,
+		17 => DumboOctopus::class,
+		18 => PassagePathing::class,
+		20 => TrenchMap::class,
+		21 => DiracDice::class,
+		22 => ReactorReboot::class,
+		24 => ArithmeticLogicUnit::class,
+		25 => SeaCucumber::class,
+	];
+
+	$options = getopt("d:o:v", ["day:", "override:", "verbose"]);
+
+	$day = (int)$options['day'] ?? (int)$options['d'] ?? null;
+	$override = $options['override'] ?? $options['o'] ?? null;
+	$verbose = isset($options['verbose']) || isset($options['v']);
+
+	if (!isset($helpers[$day]))
+	{
+		throw new Exception("Day " . $day . " missing from config");
+	}
+
+	(new $helpers[$day](
+		$day,
+		$verbose,
+		isset($override) ? ROOT . "data/" . str_pad($day, 2, "0", STR_PAD_LEFT) . "/" . $override : null
+	))
+		->run()
+		->output()
+	;
+?>
