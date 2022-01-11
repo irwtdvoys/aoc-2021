@@ -25,7 +25,8 @@
 
 	require_once(ROOT . "bin/init.php");
 
-	// ./bin/run --day 1 --override example -v
+	// ./bin/run --day 1 --override example --verbose
+	// ./bin/run -d=1 -o=example -v
 
 	$helpers = [
 		1 => SonarSweep::class,
@@ -55,7 +56,7 @@
 
 	$options = getopt("d:o:v", ["day:", "override:", "verbose"]);
 
-	$day = (int)$options['day'] ?? (int)$options['d'] ?? null;
+	$day = (int)($options['day'] ?? $options['d'] ?? null);
 	$override = $options['override'] ?? $options['o'] ?? null;
 	$verbose = isset($options['verbose']) || isset($options['v']);
 
