@@ -24,6 +24,8 @@
 	use App\TrickShot;
 	use App\Vents;
 
+	ini_set("memory_limit", "256M");
+
 	const ROOT = __DIR__ . "/../";
 
 	require_once(ROOT . "bin/init.php");
