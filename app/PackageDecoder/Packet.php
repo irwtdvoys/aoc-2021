@@ -99,7 +99,7 @@
 
 							while (strlen($subData) > 0)
 							{
-								$packet = new \App\Packet($subData, DataType::BIN, $this->depth + 1);
+								$packet = new Packet($subData, DataType::BIN, $this->depth + 1);
 								$this->subPackets[] = $packet;
 								$subData = substr($subData, strlen($packet->binary));
 							}
